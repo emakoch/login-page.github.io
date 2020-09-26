@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC «-//W3C//DTD HTML 4.01//EN» «http://www.w3.org/TR/html4/strict.dtd»>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fakeLoader.min.css">
+    
+</head>
+<body>
+    
+   
+
+
+
+    <section class="registration__form">
+        <div class="registration__form--left">	
+        </div>
+
+        <div class="registration__form--right">
+        	<div class="blocks">
+                <div class="block__title">
+                    <p class="block__text">Registration form</p>
+                </div>
+        		<div class="block"><p class="block__text">Name </p>
+        			<input type="text" placeholder="Luke Skyworker">		
+        		</div>
+        		<div class="block">
+        			<p>Gender</p>
+        			<div class="gender">
+        				<input type='radio' id='male' checked='checked' name='radio'>
+                            <label for='male'>Male</label>
+                            <input type='radio' id='female' name='radio'>
+                            <label for='female'>Female</label>
+					</div>
+        		</div>
+        		<div class="block"><p class="block__text">Date of Birth</p>
+        			<input type="date" value="2020-05-20">		
+        		</div>
+        		<div class="block"><p class="block__text">Email</p>
+        			<input type="text" placeholder="lukeskyworker@galaxy.com">		
+        		</div>
+        		<div class="block"><p class="block__text">City</p> 
+        			<input type="text" placeholder="Moisture Farm">		
+        		</div>
+        		<div class="block"><p class="block__text">Country</p>
+        			<input type="text" placeholder="Tatooine">		
+        		</div>
+        		<div class="block">
+        			<p class="block__text">Subscription</p>
+        			<div class="sub__btn">
+        				<div class="radio-group radio-group--3">
+							<input type="radio" id="radio-1" name="radio-group" class="radio-group__input" checked>
+							<label for="radio-1" class="radio-group__label">
+								Bronze
+							</label>
+						
+							<input type="radio" id="radio-2" name="radio-group" class="radio-group__input">
+							<label for="radio-2" class="radio-group__label">
+								Silver
+							</label>
+							
+							<input type="radio" id="radio-3" name="radio-group" class="radio-group__input">
+							<label for="radio-3" class="radio-group__label">
+								Gold
+							</label>
+						
+							<span class="radio-group__background"></span>
+						</div>
+        			</div>
+        		</div><div class="btn">
+        		<a href="#" class="cancel btn__link">Cancel</a>
+        		<br>
+        		<a href="#" class="save btn__link">Save</a>
+        	</div>
+        </div>
+        	</div>
+
+
+        	
+
+        	
+
+
+    </section>
+  
+    
+
+
+
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+<script src="../node_modules/dist/fakeLoader.min.js"></script>
+    	
+    	<div class="fakeLoader">
+    		
+
+    	</div>
+
+        <script>
+            $(document).ready(function () {
+                $.fakeLoader({
+                    bgColor: '#2ecc71',
+                    spinner:"spinner6",
+                    timeToHide:10000,
+                });
+            });
+        </script>
+
+	<script src="js/fakeLoader.min.js" defer></script>
+	<script src="js/script.js" defer></script>
+</body>
+</html>

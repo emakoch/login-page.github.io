@@ -1,0 +1,462 @@
+@import "reset.css";
+@import "demo.css";
+
+
+
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+/* Registrtaion */
+.registration__form{
+  border: 2px solid transparent;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 2px #c1bebe;
+  width: 1200px;
+  height: 800px;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  margin: 35px 10px 35px 40px;
+}
+.registration__form--left,
+.registration__form--right{
+    width: 40%;
+    height: 40%;
+}
+.registration__form--left{
+    width: 700px;
+    height: 800px;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.registration__form--right{
+    margin: 90px 0 0 80px ;
+    width: 800px;
+    max-width: 800px;
+}
+/* Block */
+.block{
+    color: #818587;
+    font-size: 1.2rem;
+    font-weight:400;
+    display: flex;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    position: relative;
+
+}
+.block input{
+    color: #000;    
+    width: 300px;
+    height: 40px;
+    padding: 15px 60px 15px 20px;
+    border: 2px solid #dfe7ea;
+    border-radius: 5px;
+    text-transform: capitalize;
+
+}
+.block input[value],input::placeholder{
+    font-size: 1rem;
+    color: #c8d3dc;
+}
+.block__title{
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  z-index: 5;
+  top: -30px;
+}
+.block p{
+    line-height: 45px;
+}
+
+/* Gender */
+.gender{
+    position: absolute;
+    justify-content: space-between;
+    color:#818587;
+    display: flex;
+    right: 100px;
+}   
+.gender input[type="radio"] {
+  display: none;
+}
+
+.gender input[type="radio"] + label {
+  z-index: 10;
+  margin: 0 12px 10px 0;
+  position: relative;
+  color: #ced4da;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 2px solid #ced4da;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.gender input[type="radio"]:checked + label {
+  color: #495057;
+  background-color: #ced4da;
+}
+
+.gender input[type="radio"] + label {
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+/*Subcription*/
+.sub__btn{
+  margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.radio-group {
+  z-index: 1;
+  position: relative;
+  width: 15.6em;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.radio-group__label {
+  z-index: 1;
+  float: left;
+  height: 3em;
+  padding: 1em 1em;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+}
+
+.radio-group__input {
+  z-index: -9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.radio-group label:nth-child(2n){
+    color: #fbb13d;
+}
+.radio-group label:nth-child(4n){
+    color: #998675;
+}
+.radio-group label:nth-child(3n){
+    color: #fcee21;
+}
+
+.radio-group__input:first-of-type:checked ~ .radio-group__background {
+          transform: translate(0);
+}
+.radio-group__input:nth-of-type(2):checked ~ .radio-group__background {
+          transform: translate(100%, 0);
+}
+.radio-group__input:nth-of-type(3):checked ~ .radio-group__background {
+          transform: translate(200%, 0);
+}
+
+.radio-group__background {
+  z-index: -1;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 80%;
+  background: #ced4da;
+  border-radius: 9px;
+  transform: translate(0);
+  transition: all 0.2s ease-out;
+}
+.radio-group.radio-group__label:nth-child(3n) .radio-group__background{
+  background-color: red;
+}
+
+.radio-group--3 .radio-group__label,
+.radio-group--3 .radio-group__background {
+  width: 33.3333%;
+}
+
+.radio-group--2 .radio-group__label,
+.radio-group--2 .radio-group__background {
+  width: 50%;
+}
+
+.btn{
+  margin-left: 100px;
+  margin-top: 170px;
+  display: flex;
+}
+.btn__link{
+  border: none;
+  padding: 1rem 5rem;
+  color: #767a7c;
+}
+.btn__link:hover{
+  background-color:#95eb75;
+  border: 1px solid #95eb75;
+  border-radius: 4px;
+  color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+
+  .registration__form{
+  width: 800px;
+  height:600px;
+  display: flex;
+  margin: 35px 10px 35px 40px;
+}
+
+.registration__form--left,
+.registration__form--right{
+    width: 40%;
+    height: 40%;
+}
+.registration__form--left{
+    width: 500px;
+    height: 600px;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.registration__form--right{
+    margin: 30px 0 0 20px ;
+    width: 400px;
+}
+/* Block */
+.block{
+    font-size: .8rem;
+    display: flex;
+    width: 300px;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+.block:last-child{
+  margin-bottom: 1rem
+}
+.block input{
+    width: 180px;
+    height: 25px;
+    padding: 10px 40px 15px 20px;
+
+}
+.block input[value],input::placeholder{
+    font-size: .6rem;
+}
+
+.block p{
+    line-height: 30px;
+}
+/* Gender */
+.gender{
+    position: absolute;
+    display: flex;
+    right: 15px
+}  
+/*Btn*/
+.btn{
+  margin-left: 20px;
+  display: flex;
+  margin-top: 0;
+}
+.btn__link{
+  border: none;
+  padding: .8rem 2rem;
+}
+.gender input[type="radio"] + label {
+  z-index: 10;
+  margin: 0 12px 10px 0;
+  position: relative;
+  color: #ced4da;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 200ms ease;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+  .registration__form{
+  width: 100%;
+  max-width: 767px;
+  height:800px;
+  position: relative;
+  margin: 0;
+}
+
+
+
+.registration__form--left{
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    background-image: url(../images/bg.png);
+    z-index: 1;
+}
+.registration__form--right{
+  position: absolute;
+    width: 100%;
+    width: 400px;
+    z-index: 20;  
+    margin: 80px
+}
+/* Block */
+.block{
+    color: #818587;
+    font-size: 1rem;
+    font-weight:400;
+    display: flex;
+    display: flex;
+    width: 400px;
+    margin-bottom: 1rem;
+    position: relative;
+
+    margin: 40px;
+
+}
+.block input{  
+    width: 300px;
+    height: 40px;
+    padding: 15px 60px 15px 20px;
+
+}
+.block input[value],input::placeholder{
+    font-size: .8rem;}
+
+.block p{
+    line-height: 45px;
+}
+
+/* Gender */
+.gender{
+    position: absolute;
+    display: flex;
+    right: 100px;
+}   
+.gender input[type="radio"] {
+  display: none;
+}
+
+.gender input[type="radio"] + label {
+  z-index: 10;
+  margin: 0 12px 10px 0;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 200ms ease;
+}
+.btn{
+  margin: 50% 50% 50% 40%;
+  display: flex;
+  margin-top: 0;
+}
+}
+
+@media screen and (max-width: 660px){
+
+  .registration__form{
+  width:600px;
+  height: 800px;
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+
+.registration__form--left{
+    width: 100%;
+    height: 900px;
+
+    position: absolute;
+    background-image: url(../images/bg.png);
+    z-index: 1;
+    border-radius: 10px;
+}
+.registration__form--right{
+  position: absolute;
+    width: 100%;
+    width: 400px;
+    z-index: 20;  
+}
+/* Block */
+.block{
+    font-size: 1rem;
+    display: flex;
+    width: 420px;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    position: relative;
+    margin: 40px;
+
+}
+.block input{  
+    width: 300px;
+    height: 40px;
+    padding: 15px 60px 15px 20px;
+
+}
+.block input[value],input::placeholder{
+    font-size: .8rem;}
+
+.block p{
+    line-height: 45px;
+}
+
+/* Gender */
+.gender{
+    position: absolute;
+    display: flex;
+}   
+.gender input[type="radio"] {
+  display: none;
+}
+
+.gender input[type="radio"] + label {
+  z-index: 10;
+  margin: 0 12px 10px 0;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 200ms ease;
+}
+.btn{
+  margin: 50% 50% 50% 40%;
+  display: flex;
+  margin-top: 0;
+}
+
+}
+@media screen and (max-width: 414px){
+.registration__form--left{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    background-image: url(../images/bg.png);
+    z-index: 1;
+}
+
+.registration__form--right{
+    width: 100%;
+}
+/* Block */
+.block{
+    font-size: .8rem;
+    display: flex;
+    width: 400px;
+    margin-bottom: 1rem;
+    position: relative;
+
+}
+.btn{
+  margin-left:100px;
+  display: flex;
+  margin-top: 0;
+}
+
+}
